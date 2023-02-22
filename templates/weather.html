@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+
+        <form method="POST" action="/add_city">
+            <input type="text" name="city">
+            <button type="submit">Add City</button>
+        </form>
+        <nav>
+          <ul>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          </ul>
+        </nav>
+        {% if weather %}
+            {% for city in weather %}
+                <div class="city">
+                    <h2>{{ city['city'] }}</h2>
+                    <p>Temperature: {{ city['temperature'] }} &deg;F</p>
+                    <p>Description: {{ city['description'] }}</p>
+                    <img src="http://openweathermap.org/img/w/{{ city['icon'] }}.png">
+                    <form method="POST" action="{{ url_for('delete_city') }}">
+                        <input type="hidden" name="city_id" value="{{ city['id'] }}">
+                        <button type="submit">Remove</button>
+                    </form>
+                    <form method="POST" action="/update_city">
+                        <input type="hidden" name="city_id" value="{{ city['id'] }}">
+                        <input type="text" name="new_city_name" value="{{ city['city'] }}">
+                        <button type="submit">Update</button>
+                    </form>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+    

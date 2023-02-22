@@ -1,0 +1,150 @@
+/* Set the font and background color for the whole page */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(rgba(45, 45, 45, 1), rgba(16, 16, 16, 1));
+    color: #fff;
+    margin: 0;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #fff;
+    color: #444;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+  }
+  
+  /* Style the form */
+  form {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  label {
+    display: block;
+    margin-right: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #111;
+    color: #fff;
+  }
+  
+  button[type="submit"] {
+    background-color: #f6b93b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ff4757;
+  }
+  
+  /* Style the city boxes */
+  .city {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .city:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1572114697142-72b1b82fa8a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(10px);
+    z-index: -1;
+  }
+  
+  .city:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    z-index: -1;
+  }
+  
+  .city h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 10px;
+  }
+  
+  .city p {
+    font-size: 1.8rem;
+    margin: 0 0 5px;
+  }
+  
+  .city img {
+    margin-top: 10px;
+  }
+  
+  .city:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  @media screen and (max-width: 768px) {
+  }.container {
+    padding: 10px;
+} 
+  
+nav {
+  background-color: #333;
+  overflow: hidden;
+  height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: right;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
